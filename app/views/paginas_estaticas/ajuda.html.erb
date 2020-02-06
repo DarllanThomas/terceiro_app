@@ -1,7 +1,17 @@
-<h1>Ajuda</h1> 
-<p> 
-Você pode ler mais sobre Rails na página 
-<a href="https://guides.rubyonrails.org/">
- Ruby on Rails Guides</a> 
- e sobre Ruby em <a href="https://ruby-doc.org/">Ruby-Doc.org</a> 
- </p>
+<% provide(:title, "Ajuda") %> 
+<!DOCTYPE html>
+ <html> 
+ <head> 
+ <title><%= yield(:title) %> | Terceiro App Web II</title> 
+ </head>
+  <body> 
+  <h1>Terceiro App</h1> 
+  <p>Este é o terceiro aplicativo Rails da disciplina
+   <strong>Desenvolvimento de Software para a Web II</strong>
+    do curso de Sistemas de Informação em 
+      <a href="http://ufal.edu.br/arapiraca/unidades-de-ensino/penedo"> 
+      Penedo 
+      </a></p> 
+
+      </body> 
+      </html>
