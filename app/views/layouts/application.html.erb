@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title> <%= yield(:title) % > | Terceiro App Web II </title> 
+  <title> <%= yield(:title) %> | Terceiro App Web II </title> 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,20 +10,31 @@
   </head>
 
   <body>
+  <header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to 'terceiro app', '/', id: 'logo' %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'Início', '/' %></li>
+        <li><%= link_to 'Ajuda',  '/paginas_estaticas/ajuda' %></li>
+        <li><%= link_to 'Entrar', '#' %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="container">
+  <%= yield %>
   <footer class="footer">
-<small>
-Terceiro App criado por Thiago
-</small>
-<nav>
-<ul class="nav navbar-nav navbar-right">
-<li><%= link_to 'Sobre', '#' %></li>
-<li><%= link_to 'Contato', '#' %></li>
-</ul>
-</nav>
-</footer>
-
-      <div class="container"> 
-      <%= yield %> 
-      </div>
+  <small>
+  Terceiro App criado por 
+  </small>
+  <nav>
+  <ul class="nav navbar-nav navbar-right">
+  <li><%= link_to 'Sobre', '/paginas_estaticas/sobre' %></li>
+  <li><%= link_to 'Contato', '/paginas_estaticas/contato' %></li>
+  </ul>
+  </nav>
+  </footer>
+</div>
     </body>
   </html>
