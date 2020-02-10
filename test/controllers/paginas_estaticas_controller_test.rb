@@ -2,15 +2,21 @@ require 'test_helper'
 
 class PaginasEstaticasControllerTest < ActionDispatch::IntegrationTest
   def setup 
-    assert_select "title" , "Início | #{@titulo_base}"
+    assert_select "title" , "Inicio | #{@titulo_base}"
  
   end
+  test "should get root" do 
+    get root_url 
+    assert_response :success
+
+  end
+
   test "should get inicio" do
     get paginas_estaticas_inicio_url
     assert_response :success
-    assert_select "title" , "Início | Terceiro App Web II"
-
+    assert_select "title" , "Inicio | Terceiro App Web II"
   end
+
 
   def setup 
     assert_select "title" , "Ajuda | #{@titulo_base}"

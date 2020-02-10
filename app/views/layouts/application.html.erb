@@ -10,6 +10,20 @@
   </head>
 
   <body>
-    <%= yield %>
-  </body>
-</html>
+  <footer class="footer">
+<small>
+Terceiro App criado por Thiago
+</small>
+<nav>
+<ul class="nav navbar-nav navbar-right">
+<li><%= link_to 'Sobre', '#' %></li>
+<li><%= link_to 'Contato', '#' %></li>
+</ul>
+</nav>
+</footer>
+
+      <div class="container"> 
+      <%= yield %> 
+      </div>
+    </body>
+  </html>
